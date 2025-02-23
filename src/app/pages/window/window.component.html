@@ -1,0 +1,31 @@
+@if(isVisible) {
+    <div class="modal-content" [ngClass]="{'maximized': isMaximized, 'minimized': isMinimized}" cdkDrag>
+        <div class="header">
+            <p class="title">About me</p>
+            <div class="buttons">
+                <button mat-icon-button class="b-minimize" (click)="minimize()">
+                    <mat-icon>remove</mat-icon> <!-- Minimizar -->
+                </button>
+                <button mat-icon-button class="b-maximize" (click)="maximize()">
+                    <mat-icon>crop_square</mat-icon> <!-- Maximizar -->
+                </button>
+                <button mat-icon-button (click)="close()" class="b-close">
+                    <mat-icon>close</mat-icon> <!-- Cerrar -->
+                </button>
+            </div>
+        </div>
+        <div class="content-info">
+            <div class= "info">
+                <p>A̲rchivo</p>
+                <p>E̲ditar</p>
+                <p>V̲er</p> 
+                <p>F̲avoritos</p>
+                <p>H̲erramientas</p>
+                <p>A̲yuda</p>
+            </div>
+            <div class = "img-windows">
+                <img src="img/aboutme.webp" alt="Imagen papelera" class="windows-image" />
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,16 @@
+<div class="parent-container">
+  <div class="example-boundary">
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick()">
+      <img src="img/papelera.png" alt="Imagen papelera" class="recycle-image" />
+      <div class="text">Papelera de reciclaje</div>
+    </div>
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick()">
+      <img src="img/aboutme.webp" alt="Imagen papelera" class="recycle-image" />
+      <div class="text">Acerca de Mi</div>
+    </div>
+  </div>
+  @if(isShowWindows){
+  <app-window [isShowWindows]="isShowWindows" (closeWIndows)="closeWindows($event)"></app-window>
+  }
+<app-footer></app-footer>
+</div>

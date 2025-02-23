@@ -1,0 +1,24 @@
+.bar-footer {
+    margin-top: auto; /* Esto empuja la barra hacia el fondo */
+    background-color: #d3d0c9;
+    width: 99.8%;
+    height: 28px; /* Altura de la barra */
+    border: outset 2px #ebe8e8b7;
+/* Organiza los elementos horizontalmente */
+
+}
+
+.start-image {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+.start-image-img {
+    width: 75px; /* Imagen ocupará el 100% del ancho del contenedor */
+    height: 95%; /* Mantener la relación de aspecto original */    
+}
+.start-image-img.activate {
+    border: inset 2px #ebe8e8b7;
+}

@@ -1,0 +1,61 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos verticalmente */
+    min-height: 100vh;
+    /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    height: 100%;
+    /* Permite que se ajuste al tamaño de la ventana */
+}
+
+.example-box {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* 2 filas: una para la imagen y otra para el texto */
+    width: 150px;
+    /* Ancho fijo del contenedor */
+    height: 150px;
+    /* Alto fijo del contenedor */
+    /*alinear los itemes hotizontamente al centro*/
+    justify-items: center;
+    cursor: pointer;
+}
+
+.recycle-image {
+    width: 50px;
+    /* Ancho fijo de la imagen */
+    height: 100px;
+    /* Alto fijo de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste sin distorsión */
+}
+
+.text {
+    max-width: 100px;
+    /* Limitar el tamaño máximo del texto */
+    white-space: nowrap;
+    /* Evitar el salto de línea en el texto */
+    overflow: hidden;
+    /* Ocultar cualquier texto que se pase */
+    text-overflow: ellipsis;
+    /* Agregar puntos suspensivos si el texto es muy largo */
+    font-size: 14px;
+    color: #faf3f3;
+}
+
+.example-box:hover {
+    background-color: #faf3f333;
+}
+
+.example-box:active {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.068),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.example-boundary {
+    width: 99%;
+    height: 96vh;
+    max-width: 100%;
+    border: dotted #ccc 2px;
+}

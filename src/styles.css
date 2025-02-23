@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Tahoma, sans-serif !important; /* Fuente de Windows XP */
+}
+  body {
+    background-image: url('assets/img/image-xp.jpg');
+    background-size: cover; /* Para que la imagen cubra todo el área */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que el fondo se quede fijo mientras se hace scroll */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

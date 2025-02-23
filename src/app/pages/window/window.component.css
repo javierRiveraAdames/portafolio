@@ -1,0 +1,102 @@
+.modal-content {
+    background-color: antiquewhite;
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #1d5db5;
+}
+.modal-content.maximized {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+
+.modal-content.minimized {
+    width: 10%;
+    height: 10%;
+    top: 90%;
+    left: 90%;
+    border-radius: 5px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Alinea texto a la izquierda y botones a la derecha */
+    align-items: center; /* Centra verticalmente */
+    background: linear-gradient(to bottom, #1d5db5, #3a74cc);
+    color: white;
+    padding: 2px 5px;
+    cursor: move;
+}
+
+.title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+   
+}
+.b-minimize , .b-maximize{
+    cursor: pointer;
+    border : 1px solid white;
+    border-radius: 10%;
+    background: linear-gradient(to bottom, #1d5db5, #3a74cc);
+}
+.b-close {
+    cursor: pointer;
+    border : 1px solid white;
+    border-radius: 10%;
+    background: linear-gradient(to bottom, #b51d1d, #cc3a3a);
+}
+
+mat-icon {
+    color: white;
+}
+
+.content-info {
+    border-bottom: ridge 2px #5e5f612f;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between; /* Asegura que los dos contenedores estén en los extremos */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+}
+
+.info {
+    display: flex; /* Coloca los <p> en una fila */
+    align-items: center; /* Alinea los <p> verticalmente */
+}
+
+.info p {
+    margin-right: 20px; /* Agrega espacio entre los elementos <p> */
+}
+
+.img-windows {
+   
+    display: flex;
+    justify-content: flex-end; /* Alinea la imagen al final del contenedor */
+    align-items: flex-start; /* Alinea la imagen al principio verticalmente */
+    width: 35px;
+    height: 35px;
+    
+}
+
+.windows-image {
+    border-left : groove 2px #5e5f614d;
+    background-color: white;
+    height: 109%; /* Mantiene la relación de aspecto */
+    
+}
