@@ -1,12 +1,25 @@
 @if (isVisible) {
 
-    <div class="content-parent" #contentParent>
-        <header class="header" #header>
-            <div>
-                <b #title>Title</b>
-              </div>
-    
-        </header>
-    
-    </div>
+<div class="content-parent" #contentParent>
+    <header class="header" #header>
+        <div class="header-content-left">
+            <img src="img/cv.png" alt="Imagen papelera" class="wordpad-img" />
+            <img src="img/save.png" alt="Imagen papelera" class="save-img" />
+            <mat-icon>undo</mat-icon>
+        </div>
+        <div class="header-content-rigth">
+            <button mat-icon-button class="b-minimize" (click)="minimize()">
+                <mat-icon>remove</mat-icon> <!-- Minimizar -->
+            </button>
+            <button mat-icon-button class="b-maximize pixel" (click)="maximize()">
+                <mat-icon>crop_square</mat-icon> <!-- Maximizar -->
+            </button>
+            <button mat-icon-button (click)="close()" class="b-close">
+                <mat-icon>close</mat-icon> <!-- Cerrar -->
+            </button>
+        </div>
+
+    </header>
+
+</div>
 }

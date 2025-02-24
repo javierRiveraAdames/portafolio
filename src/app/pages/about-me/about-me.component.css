@@ -17,10 +17,51 @@
         inset -2px -2px 0px #5be3f1; /* Efecto de sombra */
 }
 .header {
-    background-image: linear-gradient(to left, #bad3eb, #bfd5ec, #c3d8ed, #c8daed, #ccddee);/* Light grey pixelation *//
+    display: flex;
+    justify-content: space-between; /* Alinea texto a la izquierda y botones a la derecha */
+    align-items: center; /* Centra verticalmente */
+    background-image: linear-gradient(to left, #bad3eb, #bfd5ec, #c3d8ed, #c8daed, #ccddee);/* Light grey pixelation */
    
 }
-.pixelated-header {
-    background-size: 2px 2px; /* Adjust pixel size as needed */
-    image-rendering: pixelated; /* Or pixelated */
+.wordpad-img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    padding: 2px;
+    border-right: ridge 3px #d9d8d2;
+}
+.save-img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    padding: 2px;
+
+}
+
+
+.b-minimize , .b-maximize{
+    color: white;
+    cursor: pointer;
+    border : 1px solid white;
+    border-radius: 10%;
+    background:repeating-linear-gradient(#bad3eb, #bad3eb91 30%, #e5f0fad7 50%, #e5f0fad7  100%);
+}
+.b-close {
+    cursor: pointer;
+    color: white;
+    border : 1px solid white;
+    border-radius: 10%;
+    background: repeating-linear-gradient(#e24141, #e74a4a 30%, #fd8686d7 50%, #fd8686d7  100%);
+}
+mat-icon {
+    color: white;
+    height: 22px;
+    width: 22px;
+}
+
+.header-content-left{
+    padding: 5px;
+}
+.header-content-right{
+    padding: 5px;
 }

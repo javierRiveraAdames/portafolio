@@ -22,8 +22,8 @@ export class WindowComponent implements OnInit {
      this.open();
    }
   }
+
   open() {
-    console.log('open');
     this.isVisible = true;
   }
 
