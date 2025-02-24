@@ -1,16 +1,23 @@
 <div class="parent-container">
   <div class="example-boundary">
-    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick()">
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick('aboutMe')">
+      <img src="img/cv.png" alt="Imagen papelera" class="recycle-image" />
+      <div class="text">About Me</div>
+    </div>
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick('projects')">
+      <img src="img/aboutme.webp" alt="Imagen papelera" class="recycle-image" />
+      <div class="text">Mis proyectos</div>
+    </div>
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick('trash')">
       <img src="img/papelera.png" alt="Imagen papelera" class="recycle-image" />
       <div class="text">Papelera de reciclaje</div>
     </div>
-    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick()">
-      <img src="img/aboutme.webp" alt="Imagen papelera" class="recycle-image" />
-      <div class="text">Acerca de Mi</div>
-    </div>
   </div>
-  @if(isShowWindows){
-  <app-window [isShowWindows]="isShowWindows" (closeWIndows)="closeWindows($event)"></app-window>
+  @if(windows.projects === windowsSelected){
+  <app-window [isShowWindows]=true (closeWIndows)="closeWindows($event)"></app-window>
+  }@else if (windows.aboutMe === windowsSelected) {
+  <app-about-me [isShowWindows]=true></app-about-me>
   }
+
 <app-footer></app-footer>
 </div>

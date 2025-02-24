@@ -1,0 +1,26 @@
+.content-parent{
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #bad3eb, #bfd5ec, #c3d8ed, #c8daed, #ccddee);
+    border: 1px solid rgba(0, 0, 0, 0.658);
+    box-shadow:
+        inset 2px 2px 2px #d9d8d2, /* Efecto de luz */
+        inset 2px 2px 0px #ffffff,  /* Efecto de luz */
+        inset -2px -2px 0px #5be3f1; /* Efecto de sombra */
+}
+.header {
+    background-image: linear-gradient(to left, #bad3eb, #bfd5ec, #c3d8ed, #c8daed, #ccddee);/* Light grey pixelation *//
+   
+}
+.pixelated-header {
+    background-size: 2px 2px; /* Adjust pixel size as needed */
+    image-rendering: pixelated; /* Or pixelated */
+}
