@@ -14,10 +14,10 @@
     </div>
   </div>
   @if(windows.projects === windowsSelected){
-  <app-window [isShowWindows]=true (closeWIndows)="closeWindows($event)"></app-window>
+  <app-window [isShowWindows]=true (closeWIndows)="closeWindows($event)" (minimizeWindows)="minimizeWindows($event)"></app-window>
   }@else if (windows.aboutMe === windowsSelected) {
   <app-about-me [isShowWindows]=true></app-about-me>
   }
 
-<app-footer></app-footer>
+<app-footer [icon]="icon"></app-footer>
 </div>

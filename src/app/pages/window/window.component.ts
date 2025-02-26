@@ -15,6 +15,7 @@ export class WindowComponent implements OnInit {
   isShowWindows = input.required<boolean>();
   // Método para abrir el modal77
   closeWIndows = output<boolean>();
+  minimizeWindows = output<string>();
 
   ngOnInit() {
    const effectrfe = this.isShowWindows();
@@ -41,5 +42,6 @@ export class WindowComponent implements OnInit {
   minimize() {
     this.isMinimized = !this.isMinimized;
     this.isMaximized = false; // Asegura que no esté maximizado cuando se minimiza
+    this.minimizeWindows.emit('minimize');
   }
 }

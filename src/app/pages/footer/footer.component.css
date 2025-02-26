@@ -1,24 +1,47 @@
 .bar-footer {
-    margin-top: auto; /* Esto empuja la barra hacia el fondo */
+    margin-top: auto;
     background-color: #d3d0c9;
     width: 99.8%;
-    height: 28px; /* Altura de la barra */
+    height: 28px;
     border: outset 2px #ebe8e8b7;
-/* Organiza los elementos horizontalmente */
-
+    display: flex;
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+    padding-left: 5px; /* Opcional: Para espaciar un poco desde el borde */
 }
 
 .start-image {
     height: 100%;
-    width: 100%;
-    cursor: pointer;
     display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .start-image-img {
-    width: 75px; /* Imagen ocupará el 100% del ancho del contenedor */
-    height: 95%; /* Mantener la relación de aspecto original */    
+    width: 75px;
+    height: 95%;
 }
+
 .start-image-img.activate {
     border: inset 2px #ebe8e8b7;
+}
+.title-minimized{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #292828;  
+}
+
+.minimized-window {
+    width: 90px;
+    height: 79%;
+    border-radius: 2px;
+    border-left: outset 2px #ebe8e8b7;
+    border-top: outset 2px #ebe8e8b7;
+    border-right: outset 2px #ebe8e8b7;
+    border-bottom: outset 2px #ebe8e8b7;
+    background-color: #d4d0c8;
+    /* Color del borde */
+    margin-left: 5px; /* Espacio entre start-image y minimized-window */
+    box-shadow:  1px  1px 2px  #585858; /* Efecto de sombra */
 }

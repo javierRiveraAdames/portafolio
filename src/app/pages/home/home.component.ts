@@ -15,7 +15,7 @@ export class HomeComponent {
   isShowWindows = false;
   windows = Windows;
   windowsSelected = '';
-  
+  icon = '';
   onDoubleClick(windows:string) {
     if(windows ===  Windows.aboutMe){
       this.windowsSelected = Windows.aboutMe;
@@ -28,6 +28,10 @@ export class HomeComponent {
   closeWindows(event: any) {
     this.isShowWindows = false;
     this.windowsSelected = '';
+  }
+  minimizeWindows(event: any) {
+    console.log('minimizeWindows', event);
+    this.icon = event;
   }
 }
 
