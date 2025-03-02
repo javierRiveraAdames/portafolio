@@ -1,12 +1,9 @@
 .parent-container {
     display: flex;
     flex-direction: column;
-    /* Organiza los elementos verticalmente */
-    min-height: 100vh;
-    max-height: 100vh;
-    /* Asegura que el contenedor ocupe toda la altura de la ventana */
-    height: 100%;
-    /* Permite que se ajuste al tamaño de la ventana */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .example-box {

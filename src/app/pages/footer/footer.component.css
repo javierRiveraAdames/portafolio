@@ -1,12 +1,12 @@
 .bar-footer {
     margin-top: auto;
     background-color: #d3d0c9;
-    width: 99.8%;
-    height: 28px;
+    width: 100%;
+    height: 30px;
     border: outset 2px #ebe8e8b7;
     display: flex;
+    gap: 5px;
     align-items: center; /* Asegura que los elementos estén alineados verticalmente */
-    padding-left: 5px; /* Opcional: Para espaciar un poco desde el borde */
 }
 
 .start-image {
@@ -25,23 +25,39 @@
     border: inset 2px #ebe8e8b7;
 }
 .title-minimized{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     margin: 0;
     padding: 0;
-    color: #292828;  
+    color: #302f2fe0;  
 }
 
 .minimized-window {
     width: 90px;
     height: 79%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .5px;
     border-radius: 2px;
     border-left: outset 2px #ebe8e8b7;
     border-top: outset 2px #ebe8e8b7;
     border-right: outset 2px #ebe8e8b7;
-    border-bottom: outset 2px #ebe8e8b7;
+    border-bottom: outset 2px #d4d0d0b7;
     background-color: #d4d0c8;
-    /* Color del borde */
-    margin-left: 5px; /* Espacio entre start-image y minimized-window */
-    box-shadow:  1px  1px 2px  #585858; /* Efecto de sombra */
+    box-shadow:  1px  1px 2px  #4b4b4b; /* Efecto de sombra */
+    cursor: pointer;
 }
+
+.minimized-window.activate {
+    border-left: inset 2px #ebe8e8b7;
+    border-top: inset 2px #ebe8e8b7;
+    border-right: inset 2px #ebe8e8b7;
+    border-bottom: inset 2px #d4d0d0b7;
+    box-shadow:  1px  1px 5px  #4b4b4b; /* Efecto de sombra */
+}
+
+.minimized-image {
+    width: 15px;
+    height: 15px;
+}   

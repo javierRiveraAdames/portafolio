@@ -1,5 +1,5 @@
 import { Component, effect, input, output, ViewChild } from '@angular/core';
-import {CdkDrag} from '@angular/cdk/drag-drop';
+import { CdkDrag } from '@angular/cdk/drag-drop';
 import { WindowComponent } from '../window/window.component';
 import { FooterComponent } from "../footer/footer.component";
 import { AboutMeComponent } from "../about-me/about-me.component";
@@ -11,27 +11,36 @@ import { AboutMeComponent } from "../about-me/about-me.component";
 })
 export class HomeComponent {
   //declare input viewChu
- 
+
+  titleUpperCase = 'Welcome to my portfolio';
+  
   isShowWindows = false;
   windows = Windows;
   windowsSelected = '';
-  icon = '';
-  onDoubleClick(windows:string) {
-    if(windows ===  Windows.aboutMe){
-      this.windowsSelected = Windows.aboutMe;
-    }else if(windows === Windows.projects){
-      this.windowsSelected = Windows.projects;
-    }else if(windows === Windows.contact){
-      this.windowsSelected = Windows.contact
+  icon: { icon: string, show: boolean, image: string } = { icon: '', show: false, image: '' };
+  icons: { window: string, show: boolean }[] = [];
+  resizedWindows:{ icon: string, show: boolean, image: string } = { icon: '', show: false, image: '' }; 
+    onDoubleClick(windows: string) {
+    const setWindows = new Set(this.icons.map((item) => item.window));
+    if (!setWindows.has(windows)) {
+      this.icons.push({ window: windows, show: true });
     }
   }
-  closeWindows(event: any) {
+  closeWindows(icon: string) {
+    console.log('close', icon);
+    this.icons = this.icons.filter((item) => item.window !== icon);
+    console.log('icons', this.icons);
     this.isShowWindows = false;
     this.windowsSelected = '';
   }
-  minimizeWindows(event: any) {
-    console.log('minimizeWindows', event);
+  minimizeWindows(event: { icon: string, show: boolean, image: string }) {
     this.icon = event;
+  }
+  maximizeWindows(event: any) {
+    this.icon = event;
+  }
+  resizeWindows(event: any) {
+    this.resizedWindows = event;
   }
 }
 

@@ -2,10 +2,17 @@
     <div class="start-image"  (click)="startImage()">
     <img src="img/start_classic_icon.png" alt="Imagen inicio" class="start-image-img" [ngClass] ="{'activate': isClickedImage}"/>
     </div>
-    @if(iconType){
+    @if(windowsMinimized.length > 0){
   
-        <div class="minimized-window" >
+        @for(window of windowsMinimized; track window.icon ){
+            <div class="minimized-window" (click)="removeIcon(window)" [ngClass] ="{'activate': window.icon == selectWindow}">
+                <img [src]="window.image" [alt]="window.icon" class="minimized-image" />
+                <p class="title-minimized"> {{window.icon}}</p>
+            </div>
+        }
+        <!-- <div class="minimized-window" (click)="resideWindows()" [ngClass] ="{'activate': isResized}">
+            <img src="img/aboutme.webp" alt="About me" class="minimized-image" />
             <p class="title-minimized"> minimized</p>
-        </div>
+        </div> -->
     }
 </div>

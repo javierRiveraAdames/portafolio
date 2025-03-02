@@ -1,4 +1,5 @@
 .content-parent{
+    padding: 5px;
     width: 50%;
     height: 50%;
     position: fixed;
@@ -22,8 +23,9 @@
     align-items: center; /* Centra verticalmente */
     background-image: linear-gradient(to left, #bad3eb, #bfd5ec, #c3d8ed, #c8daed, #ccddee);/* Light grey pixelation */
     box-shadow: inset 0px 0px 1px #444444;
-    
-   
+    cursor: move;
+
+
 }
 .wordpad-img{
     width: 25px;
@@ -91,6 +93,78 @@ mat-icon {
 
 .divider {
     border-left: ridge 3px #8b898942;
-    height: 30px; 
-    margin: 0 10px; 
+    height: 30px;
+    margin: 0 10px;
+}
+.sub-header{
+    height: 30px;
+    display: flex;
+    /* background-color: dodgerblue; */
+    padding: 2px;
+}
+.sub-header-content-left{
+    display: flex;
+    /* background-color: aqua; */
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: start;
+    border-bottom: solid 1px #8b8989e7;
+    gap: 3px;
+}
+
+.sub-header-content-right{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: end;
+    border-bottom: solid 1px #8b8989e7;
+    /* background-color: #e24141; */
+}
+.sub-header-left-icons{
+background: linear-gradient(176deg, rgba(23,69,223,1) 6%, rgba(71,103,208,0.9907192575406032) 86%, rgba(148,158,190,1) 100%);
+    padding: 2px;
+    border-radius: 5px 5px 0   0;
+}
+.sub-header-left-icons-2{
+    background:repeating-linear-gradient(#bad3eb, #bad3eb91 30%, #e5f0fad7 50%, #e5f0fad7  100%);
+    border-top: solid 1px #8b8989e7;
+    border-left: solid 1px #8b8989e7;
+    border-right: solid 1px #8b8989e7;
+    padding: 2px;
+    border-radius: 4px 4px 0   0;
+}
+.home-button{
+    background: linear-gradient(176deg, rgba(23,69,223,1) 6%, rgba(71,103,208,0.9907192575406032) 86%, #949ebe 100%);
+
+    border-radius: 4px 4px 0   0;
+}
+.p-sub-header{
+    padding: 2px;
+    height: 100%;
+    margin: 0px;
+}
+.p-sub-header-2{
+    padding: 2px;
+    height: 100%;
+    margin: 0px;
+}
+.blank{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-bottom: solid 1px #8b8989e7;
+    justify-content: center;
+    align-items: center;
+}
+.content-about-me{
+    background-color: #ffffff;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    
 }

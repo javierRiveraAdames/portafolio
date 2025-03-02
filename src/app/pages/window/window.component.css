@@ -70,6 +70,7 @@ mat-icon {
 .content-info {
     border-bottom: ridge 2px #5e5f612f;
     font-size: 12px;
+    padding-left: 5px; 
     display: flex;
     justify-content: space-between; /* Asegura que los dos contenedores estén en los extremos */
     align-items: flex-start; /* Alinea los elementos al inicio del contenedor */

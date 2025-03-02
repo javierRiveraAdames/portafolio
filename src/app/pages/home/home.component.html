@@ -13,11 +13,12 @@
       <div class="text">Papelera de reciclaje</div>
     </div>
   </div>
-  @if(windows.projects === windowsSelected){
-  <app-window [isShowWindows]=true (closeWIndows)="closeWindows($event)" (minimizeWindows)="minimizeWindows($event)"></app-window>
-  }@else if (windows.aboutMe === windowsSelected) {
-  <app-about-me [isShowWindows]=true></app-about-me>
+  @for(icon of icons ;track icon.window){
+    @if(windows.projects === icon.window){
+    <app-window [isShowWindows]=true (closeWIndows)="closeWindows(icon.window)" (minimizeWindows)="minimizeWindows($event)" [resizedWindows]= "resizedWindows"></app-window>
+    }@else if (windows.aboutMe === icon.window) {
+    <app-about-me [isShowWindows]=true (closeWIndows)="closeWindows(icon.window)" (minimizeWindows)="minimizeWindows($event)" [resizedWindows]= "resizedWindows"></app-about-me>
+    }
   }
-
-<app-footer [icon]="icon"></app-footer>
+<app-footer [icon]="icon" (residedWindows)="resizeWindows($event)"></app-footer>
 </div>
