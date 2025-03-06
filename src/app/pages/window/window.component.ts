@@ -14,7 +14,7 @@ export class WindowComponent implements OnInit {
   isMinimized = false;
   isVisible: boolean = false;
   isShowWindows = input.required<boolean>();
-  mockNumbers: number[] = Array.from({ length: 18 }, (_, i) => i + 1);
+
 
   resizedWindows = input(null, {
     alias: 'resizedWindows',
