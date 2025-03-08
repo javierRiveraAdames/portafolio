@@ -4,59 +4,69 @@
     <header class="header" #header>
         <div class="header-content-left">
             <img src="img/cv.png" alt="Imagen papelera" class="wordpad-img" />
-            <div class="divider"></div>
-            <img src="img/save.png" alt="Imagen papelera" class="save-img" />
-            <svg class="icon-svg rotate-60" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-                width="24">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z" />
-            </svg>
-            <svg class="icon-svg rotate-120" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-                width="24">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16c1.05-3.19 4.05-5.5 7.6-5.5 1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z" />
-            </svg>
-            <div class="divider"></div>
 
-            <span class="title">About me</span>
+            <span class="title">About me - WordPad</span>
 
         </div>
         <div class="header-content-rigth">
-            <button mat-icon-button class="b-minimize" (click)="minimize()">
-                <mat-icon>remove</mat-icon> <!-- Minimizar -->
-            </button>
-            <button mat-icon-button class="b-maximize pixel" (click)="maximize()">
-                <mat-icon>crop_square</mat-icon> <!-- Maximizar -->
-            </button>
-            <button mat-icon-button (click)="close()" class="b-close">
-                <mat-icon>close</mat-icon> <!-- Cerrar -->
-            </button>
+            <div class="buttons">                
+                <button mat-icon-button class="b-minimize" (click)="minimize()">
+                    <mat-icon>remove</mat-icon> <!-- Minimizar -->
+                </button>
+                <button mat-icon-button class="b-maximize pixel" (click)="maximize()">
+                    <mat-icon>crop_square</mat-icon> <!-- Maximizar -->
+                </button>
+                <button mat-icon-button (click)="close()" class="b-close">
+                    <mat-icon>close</mat-icon> <!-- Cerrar -->
+                </button>
+            </div>
         </div>
     </header>
     <div class="sub-header">
-        <div class="sub-header-content-left">
-            <div class="sub-header-left-icons">
-                <mat-icon>description</mat-icon>
-                <mat-icon class="mat-icon-s rotate-180">eject</mat-icon>
-            </div>
-            <div class="sub-header-left-icons-2">
-                <p class="p-sub-header">A̲rchivo</p>
-            </div>
-            <div class="sub-header-left-icons-2">
-                <p class="p-sub-header-2">View</p>
-            </div>
-
-            <!-- <div class="blank"></div> -->
-        </div>
-        <div class="sub-header-content-right">
-            <mat-icon>help</mat-icon>   
+        <div class="sub-header-content">
+            <p class="p-sub-header">A̲rchivo</p>
+            <p class="p-sub-header">E̲ditar</p>
+            <p class="p-sub-header">V̲er</p>
+            <p class="p-sub-header">F̲avoritos</p>
+            <p class="p-sub-header">H̲erramientas</p>
+            <p class="p-sub-header">A̲yuda</p>
         </div>
     </div>
-    <div class="content-about-me">
+    <div class="controls">
+
+        <div class="select-container" >
+            <select class="select-box" (change)="onFontChange($event)">
+                @for (item of  fontOptions; track item.value) {
+                    <option  class="option-font" [value]="item.value">{{item.label}}</option>
+                }
+            </select>
+            
+        </div>
+        <div class="select-container-size" >
+            <select class="select-box-size" (change)="onFontSizeChange($event)">
+                @for (item of  fontSizes; track item.value) {
+                    <option  class="option-font" [value]="item.value">{{item.label}}</option>
+                }
+            </select>
+            
+        </div>
+        <div class="select-container" >
+            <select class="select-box" (change)="onEncodingChange($event)">
+                @for (item of  encodings; track item.value) {
+                    <option  class="option-font" [value]="item.value">{{item.label}}</option>
+                }
+            </select>
+            
+        </div>
+        <mat-icon class="format-justify" (click)="alignText('center')">format_align_justify</mat-icon>
+        <mat-icon class="format-left" (click)="alignText('left')">format_align_left</mat-icon>
+        <mat-icon class="format-right" (click)="alignText('right')">format_align_right</mat-icon>
+    </div>
+    <div class="content-about-me" [ngClass]="{selectedEncoding}" [ngStyle]="{'font-family': selectedFont, 'font-size': selectedFontSize, 'text-align': selectedJustify}">
         <p>
             Hi there! I'm <strong>Carlos</strong>, a software developer based in <strong>Madrid</strong>.
+            I have a passion for technology and I love learning new things. I'm always looking for new ways to improve
+            my skills and learn new technologies.
             I have a passion for technology and I love learning new things. I'm always looking for new ways to improve
             my skills and learn new technologies.
 

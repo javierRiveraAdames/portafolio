@@ -11,7 +11,29 @@ import { Windows } from '../home/home.component';
   styleUrl: './about-me.component.css'
 })
 export class AboutMeComponent {
-  mockNumbers: number[] = Array.from({ length: 18 }, (_, i) => i + 1);
+  fontOptions = [
+    { value: 'arial', label: 'Arial' },
+    { value: 'verdana', label: 'Verdana' },
+    { value: 'times', label: 'Times New Roman' },
+    { value: 'courier', label: 'Courier New' }
+  ];
+  fontSizes = [
+    { value: '12px', label: '12' },
+    { value: '14px', label: '14' },
+    { value: '16px', label: '16' },
+    { value: '18px', label: '18' }
+  ];
+  encodings = [
+    { value: 'western', label: 'Western' },
+    { value: 'cyrillic', label: 'Cyrillic' },
+    { value: 'arabic', label: 'Arabic' },
+    { value: 'greek', label: 'Greek' },
+    { value: 'chinese', label: 'Chinese' }
+  ];
+  selectedEncoding = 'western'; // Codificación predeterminada
+  selectedFont = 'Arial'; // Valor predeterminado
+  selectedFontSize = '12px'; // Valor predeterminado
+  selectedJustify: string = '';
   isVisible: boolean = false;
   closeWIndows = output<boolean>();
   minimizeWindows = output<{ icon: string, show: boolean, image: string }>();
@@ -62,5 +84,17 @@ export class AboutMeComponent {
     this.isMinimized = false;
 
   }
-
+  onFontChange(event: any): void {
+    this.selectedFont = event.target.value;
+  }
+  onFontSizeChange(event: any): void {
+    this.selectedFontSize = event.target.value;
+  }
+  onEncodingChange(event: any): void {
+    this.selectedEncoding = event.target.value;
+  }
+  alignText(value:string): void {
+    console.log(value);
+    this.selectedJustify = value;
+  }
 }
