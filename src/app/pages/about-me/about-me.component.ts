@@ -94,7 +94,6 @@ export class AboutMeComponent {
     this.selectedEncoding = event.target.value;
   }
   alignText(value:string): void {
-    console.log(value);
     this.selectedJustify = value;
   }
 }

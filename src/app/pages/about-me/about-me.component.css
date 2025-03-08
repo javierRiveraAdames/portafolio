@@ -207,8 +207,7 @@ background-size: 1.20em auto, 100%;
 }
 
 mat-icon {
-    font-size: 32px;  /* Cambia el tamaño de los iconos */
-    margin: 10px;     /* Agrega un margen entre los iconos */
+
     cursor: pointer; /* Cambia el cursor cuando pasas sobre el icono */
   }
   
@@ -230,7 +229,6 @@ mat-icon {
   /* Estilo para el icono de alinear a la derecha */
   mat-icon.format-right {
     color: black;
-    height: 40%;
   }
   .text-justify {
     text-align: justify;
