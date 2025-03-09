@@ -58,9 +58,16 @@
             </select>
             
         </div>
-        <mat-icon class="format-justify" (click)="alignText('center')">format_align_justify</mat-icon>
-        <mat-icon class="format-left" (click)="alignText('left')">format_align_left</mat-icon>
-        <mat-icon class="format-right" (click)="alignText('right')">format_align_right</mat-icon>
+        <div class="mat-icons">
+            <mat-icon  (click)="alignText('left')">format_align_left</mat-icon>
+            <mat-icon  (click)="alignText('right')">format_align_right</mat-icon>
+            <mat-icon  (click)="alignText('center')"> format_align_center</mat-icon>
+        </div>
+        <div class="letters">
+            <p class="strong"><strong>B</strong></p>
+            <p class="strong"><strong><i>I</i></strong></p>
+            <p class="strong"><strong><u>U</u></strong></p>
+        </div>
     </div>
     <div class="content-about-me" [ngClass]="{selectedEncoding}" [ngStyle]="{'font-family': selectedFont, 'font-size': selectedFontSize, 'text-align': selectedJustify}">
         <p>

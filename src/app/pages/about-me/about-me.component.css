@@ -86,7 +86,6 @@ mat-icon {
 
 .sub-header {
     display: flex;
-    overflow: hidden;
     padding: 2px 5px;
     cursor: move;
     border-bottom: groove 2px #8b898942;
@@ -96,7 +95,7 @@ mat-icon {
         gap: 20px;
         display: flex;
         align-items: center;
-
+        padding: 5px;
         .p-sub-header {
             margin: 1%;
         }
@@ -179,6 +178,9 @@ background-size: 1.20em auto, 100%;
     padding: 5px;
     background-color: #f7f7f7;
     height: 100%;
+    overflow-y: auto;
+  
+  
 }
 
 .divider {
@@ -207,7 +209,6 @@ background-size: 1.20em auto, 100%;
 }
 
 mat-icon {
-
     cursor: pointer; /* Cambia el cursor cuando pasas sobre el icono */
   }
   
@@ -217,19 +218,32 @@ mat-icon {
   }
   
   /* Estilo para el icono de justificar */
-  mat-icon.format-justify {
-    color: green;
-  }
-  
-  /* Estilo para el icono de alinear a la izquierda */
-  mat-icon.format-left {
-    color: red;
-  }
-  
-  /* Estilo para el icono de alinear a la derecha */
-  mat-icon.format-right {
+  .format-justify {
     color: black;
+    display: block;
+    height: 30px;
+
+
   }
+  .mat-icons{
+    display: flex;
+    gap: 5px;
+  }
+  .mat-icons mat-icon {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 37px;
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #414040; /* Color del ícono */
+}
+  /* Estilo para el icono de alinear a la izquierda */
+
   .text-justify {
     text-align: justify;
   }
@@ -240,4 +254,15 @@ mat-icon {
   
   .text-right {
     text-align: right;
+  }
+  .letters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-right: 15px;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
   }
