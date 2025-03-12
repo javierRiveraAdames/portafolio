@@ -1,6 +1,6 @@
 @if (isVisible) {
 
-<div class="content-parent" #contentParent cdkDragBoundary=".example-boundary" cdkDrag>
+<div class="content-parent"  [ngClass]="{'maximized': isMaximized, 'minimized': isMinimized}" #contentParent cdkDragBoundary=".example-boundary" cdkDrag>
     <header class="header" #header>
         <div class="header-content-left">
             <img src="img/cv.png" alt="Imagen papelera" class="wordpad-img" />
@@ -64,12 +64,12 @@
             <mat-icon  (click)="alignText('center')"> format_align_center</mat-icon>
         </div>
         <div class="letters">
-            <p class="strong"><strong>B</strong></p>
-            <p class="strong"><strong><i>I</i></strong></p>
-            <p class="strong"><strong><u>U</u></strong></p>
+            <p class="strong " [ngClass]="selectStrong" (click)="strong($event)"><strong>B</strong></p>
+            <p class="strong pointer" (click)="italic($event)"><strong><i>I</i></strong></p>
+            <p class="strong pointer" (click)="underline($event)"><strong><u>U</u></strong></p>
         </div>
     </div>
-    <div class="content-about-me" [ngClass]="{selectedEncoding}" [ngStyle]="{'font-family': selectedFont, 'font-size': selectedFontSize, 'text-align': selectedJustify}">
+    <div class="content-about-me" [ngClass]="{selectedEncoding}" [ngStyle]="{'font-family': selectedFont, 'font-size': selectedFontSize, 'text-align': selectedJustify, 'text-decoration': selectedDecoration, 'font-weight': selectedWeigth, 'font-style': selectedDecoration}">
         <p>
             Hi there! I'm <strong>Carlos</strong>, a software developer based in <strong>Madrid</strong>.
             I have a passion for technology and I love learning new things. I'm always looking for new ways to improve

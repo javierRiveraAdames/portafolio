@@ -1,10 +1,10 @@
 .content-parent {
     background-color: antiquewhite;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     position: fixed;
-    top: 25%;
-    left: 25%;
+    top: 20%;
+    left: 20%;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -12,21 +12,24 @@
     border-radius: 5px;
     border: 2px solid #1d5db5;
 }
+.content-parent.maximized {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
 
 .header {
     display: flex;
     justify-content: space-between;
-    /* Alinea texto a la izquierda y botones a la derecha */
     align-items: center;
-    /* Centra verticalmente */
     background: linear-gradient(to bottom, #1d5db5, #3a74cc);
-    /*box shadow buttom */
     box-shadow: 0 2px 1px 0 #1d5db5;
     color: white;
-    padding: 2px 5px;
-    cursor: move;
-
-
+    padding: 10px 5px; /* Asegura un espacio interno suficiente */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+    overflow: hidden;  /* Oculta el exceso de contenido sin afectar el padding */
 }
 
 .wordpad-img {
@@ -90,6 +93,8 @@ mat-icon {
     cursor: move;
     border-bottom: groove 2px #8b898942;
     box-shadow: 0 1px 0.5px 0.5px #fcfdff8a;
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+    overflow: hidden;  /* Oculta el exceso de contenido sin afectar el padding */
 
     .sub-header-content {
         gap: 20px;
@@ -119,7 +124,7 @@ mat-icon {
     margin: 0px;
     padding: 5px;
     width: 100%;
-    height: 100%;
+    height: 90%;
     border: 2px solid #8b898942;
     color: rgb(12, 12, 12);
     font-size: 12px;
@@ -146,7 +151,7 @@ background-size: 1.20em auto, 100%;
     margin: 0px;
     padding: 5px;
     width: 100%;
-    height: 100%;
+    height: 90%;
     border: 2px solid #8b898942;
     color: rgb(12, 12, 12);
     font-size: 12px;
@@ -232,7 +237,7 @@ mat-icon {
   .mat-icons mat-icon {
     justify-content: space-between;
     align-items: center;
-    font-size: 37px;
+    font-size: 30px;
     height: 30px;
     width: 30px;
 
@@ -240,7 +245,7 @@ mat-icon {
     justify-content: space-between;
     align-items: center;
 
-    color: #414040; /* Color del ícono */
+    color: #000000; /* Color del ícono */
 }
   /* Estilo para el icono de alinear a la izquierda */
 
@@ -257,12 +262,26 @@ mat-icon {
   }
   .letters{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin-right: 15px;
-    font-size: 20px;
+    gap: 15px;
+    padding: 5px;
+    font-size: 25px;
     height: 20px;
-    width: 20px;
-    margin: 0px;
   }
+  .underline{
+    text-decoration: underline;
+  }
+    .bold{
+        font-weight: bold;
+    }
+    .italic{
+        font-style: italic;
+    }
+    .pointer{
+        cursor: pointer;
+    }
+    .select-strong{
+        background-color: rgba(255, 0, 0, 0.76);
+        box-shadow: 0 0 10px 0.2rem rgba(136, 130, 130, 0.76);
+    }

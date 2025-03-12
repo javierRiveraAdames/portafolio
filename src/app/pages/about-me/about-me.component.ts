@@ -30,11 +30,14 @@ export class AboutMeComponent {
     { value: 'greek', label: 'Greek' },
     { value: 'chinese', label: 'Chinese' }
   ];
+  selectedDecoration = 'none';
+  selectedWeigth!: string ;
   selectedEncoding = 'western'; // Codificación predeterminada
   selectedFont = 'Arial'; // Valor predeterminado
   selectedFontSize = '12px'; // Valor predeterminado
   selectedJustify: string = '';
   isVisible: boolean = false;
+  selectStrong!: string;
   closeWIndows = output<boolean>();
   minimizeWindows = output<{ icon: string, show: boolean, image: string }>();
   isShowWindows = input.required<boolean>();
@@ -95,5 +98,15 @@ export class AboutMeComponent {
   }
   alignText(value:string): void {
     this.selectedJustify = value;
+  }
+  strong(event: any){
+    this.selectStrong = 'select-strong';
+    !this.selectedWeigth ? this.selectedWeigth = 'bold' : this.selectedWeigth = '';
+  }
+  italic(event: any){
+    this.selectedDecoration = 'italic';
+  }
+  underline(event: any){
+    this.selectedDecoration = 'underline';
   }
 }
