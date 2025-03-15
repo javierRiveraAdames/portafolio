@@ -100,13 +100,13 @@ export class AboutMeComponent {
     this.selectedJustify = value;
   }
   strong(event: any){
-    this.selectStrong = 'select-strong';
+    !this.selectStrong ? this.selectStrong = 'select-strong' : this.selectStrong = '';
     !this.selectedWeigth ? this.selectedWeigth = 'bold' : this.selectedWeigth = '';
   }
   italic(event: any){
-    this.selectedDecoration = 'italic';
+    !this.selectedDecoration ? this.selectedDecoration = 'italic' : this.selectedDecoration = '';
   }
   underline(event: any){
-    this.selectedDecoration = 'underline';
+    !this.selectedDecoration ? this.selectedDecoration = 'underline' : this.selectedDecoration = '';
   }
 }
