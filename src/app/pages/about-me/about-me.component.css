@@ -281,7 +281,6 @@ mat-icon {
     .pointer{
         cursor: pointer;
     }
-    .select-strong{
-        border: inset 1px;
-        box-shadow: 1px 1px 1px 0.1rem rgba(136, 130, 130, 0.76);
+    .select-strong {
+        box-shadow: inset 0 0 8px rgba(136, 130, 130, 0.76);
     }

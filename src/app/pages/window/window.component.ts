@@ -65,4 +65,5 @@ export class WindowComponent implements OnInit {
     this.isMinimized = false;
  
   }
+  
 }

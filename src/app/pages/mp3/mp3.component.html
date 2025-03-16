@@ -1,0 +1,21 @@
+<div class="modal-content" [ngClass]="{'maximized': isMaximized, 'minimized': isMinimized}" cdkDrag>
+    <div class="radio-box">
+        <h1>Radio Online</h1>
+        <select class="select" (change)="selectCountry($event)">
+            <option>--selecione </option>
+            @for(country of countries; track country.name){
+                <option value="{{ country.name }}">{{ country.name }}</option>
+            }
+        </select>
+        <h2>{{countrySelected}}</h2>
+        <ul class="radio-list">
+            @for(station of stations ;track station.changeuuid ){
+                <li class="radio-item">
+                    <strong>{{ station.name }}</strong>
+                    <button class="play-button" (click)="playStation(station.url_resolved)">🎵 Reproducir</button>
+                </li>
+            }
+        </ul>
+    </div>
+    
+</div>

@@ -8,7 +8,7 @@
       <img src="img/aboutme.webp" alt="Imagen papelera" class="recycle-image" />
       <div class="text">Mis proyectos</div>
     </div>
-    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick('trash')">
+    <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag (dblclick)="onDoubleClick('mp3')">
       <img src="img/papelera.png" alt="Imagen papelera" class="recycle-image" />
       <div class="text">Papelera de reciclaje</div>
     </div>
@@ -18,6 +18,9 @@
     <app-window [isShowWindows]=true (closeWIndows)="closeWindows(icon.window)" (minimizeWindows)="minimizeWindows($event)" [resizedWindows]= "resizedWindows"></app-window>
     }@else if (windows.aboutMe === icon.window) {
     <app-about-me [isShowWindows]=true (closeWIndows)="closeWindows(icon.window)" (minimizeWindows)="minimizeWindows($event)" [resizedWindows]= "resizedWindows"></app-about-me>
+    }@else if (windows.mp3 === icon.window) {
+      
+      <app-mp3 [isShowWindows]=true></app-mp3>
     }
   }
 <app-footer [icon]="icon" (residedWindows)="resizeWindows($event)"></app-footer>
